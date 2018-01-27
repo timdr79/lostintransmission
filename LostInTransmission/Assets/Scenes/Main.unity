@@ -564,8 +564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1786719122}
-  health: 0.1
-  dropRate: 0.02
+  health: 1
+  dropRate: -0.02
 --- !u!1 &1867545053
 GameObject:
   m_ObjectHideFlags: 0
