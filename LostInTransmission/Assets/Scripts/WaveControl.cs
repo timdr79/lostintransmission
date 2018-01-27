@@ -9,9 +9,10 @@ using UnityStandardAssets.CrossPlatformInput;
 public class WaveControl : MonoBehaviour {
 
 	private bool boost;
+	public float doublespeed;
 
 	// here we store a refrence to the rigidbody. x
-	public Rigidbody2D waveRigid;
+	public Rigidbody waveRigid;
 
 	// Here we store the speed that we would like to add to move the wave. 
 	public float speed;
@@ -61,6 +62,12 @@ public class WaveControl : MonoBehaviour {
 	void Start(){
 		// in start we set the health to the max health. 
 		health = MaxHealth;
+		waveRigid.freezeRotation = true;
+	}
+	void update(){
+		if(Input.GetKeyDown(KeyCode.Space)){
+			waveRigid.AddForce(transform.forward*speed*doublespeed);
+		}
 	}
 
 
