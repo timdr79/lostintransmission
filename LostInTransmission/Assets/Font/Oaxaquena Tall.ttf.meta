@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 5abc8a37abd72cc43b1b2f415a5aface
+timeCreated: 1517078916
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Oaxaque?a Tall
+  fontNames:
+  - Oaxaque?a Tall
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
