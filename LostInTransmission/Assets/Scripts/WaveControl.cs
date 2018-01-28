@@ -216,29 +216,13 @@ public class WaveControl : MonoBehaviour {
 //		}
 	}
 
-	void healthIncrease(){
-		sliderControl.health *= 1.1f;
-		if (sliderControl.health > 1f) {
-			sliderControl.health = 1f;
-		}
-		sliderControl.healthBar.value = sliderControl.health;
-	}
 
-	void healthDecrease(){
-		sliderControl.health *= 0.9f;
-		if (sliderControl.health < 0f) {
-			sliderControl.health = 0f;
-		}
-		sliderControl.healthBar.value = sliderControl.health;
-	}
 
 
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.layer == 8) {
-			Debug.Log ("Object entered the trigger");
-			healthIncrease ();
-			other.gameObject.SetActive (false);
+//			Debug.Log ("Object entered the trigger");
 
 		}
 
@@ -248,7 +232,7 @@ public class WaveControl : MonoBehaviour {
 	void OnTriggerStay(Collider other) 
 	{
 		if (other.gameObject.layer == 8) {
-			Debug.Log ("Object stays in trigger");
+//			Debug.Log ("Object stays in trigger");
 
 
 		}
@@ -258,7 +242,7 @@ public class WaveControl : MonoBehaviour {
 	void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject.layer == 8) {
-			Debug.Log ("Object leaves trigger");
+//			Debug.Log ("Object leaves trigger");
 
 		}
 

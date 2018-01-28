@@ -35,15 +35,42 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 
 		//print("Triggered!");
-		health -= 0.1f;
-	
-		healthBar.value =  health;
+
 
 		if (other.gameObject.tag == "cat") {
 
-			other.transform.GetChild(1).gameObject.SetActive(true);
-			other.transform.GetChild(0).gameObject.SetActive(false);
+			health -= 0.1f;
 
+			healthBar.value = health;
+
+			if (other.transform.childCount > 1) {
+				other.transform.GetChild (1).gameObject.SetActive (true);
+				other.transform.GetChild (0).gameObject.SetActive (false);
+			}
+
+		} else if (other.gameObject.tag == "music") {
+			HitMusicNote (other);
 		}
+	}
+
+	void HitMusicNote(Collider other) {
+		HealthIncrease ();
+		other.gameObject.SetActive (false);
+	}
+
+	void HealthIncrease(){
+		health *= 1.1f;
+		if (health > 1f) {
+			health = 1f;
+		}
+		healthBar.value = health;
+	}
+
+	void HealthDecrease(){
+		health *= 0.9f;
+		if (health < 0f) {
+			health = 0f;
+		}
+		healthBar.value = health;
 	}
 }
