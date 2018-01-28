@@ -22,12 +22,12 @@ public class PlayerController : MonoBehaviour {
 		health += Time.deltaTime * dropRate;
 
 		healthBar.value = health;
-		if (Input.GetKeyDown(KeyCode.Space)) {
+		/*if (Input.GetKeyDown(KeyCode.Space)) {
 
 			health -= Time.deltaTime * 1.0f;
 			healthBar.value = health;
 	
-		}
+		}*/
 	}
 
 // if we collide with an object and its not the same as the last object we collided with, take damage and update the health bar. 
@@ -37,6 +37,15 @@ public class PlayerController : MonoBehaviour {
 		health -= 0.1f;
 	
 		healthBar.value =  health;
+
+		other.gameObject.GetComponent<AudioSource>().Play();
+
+		if (other.gameObject.tag == "cat") {
+
+			other.transform.GetChild(1).gameObject.SetActive(true);
+			other.transform.GetChild(0).gameObject.SetActive(false);
+
+		}
 
 		if (health <= 0) {
 		//	Debug.LogError ("Stop");

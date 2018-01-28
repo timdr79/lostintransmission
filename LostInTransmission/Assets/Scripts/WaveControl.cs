@@ -188,6 +188,7 @@ public class WaveControl : MonoBehaviour {
 				// Read the jump input in Update so button presses aren't missed.
 				boost = CrossPlatformInputManager.GetButtonDown("Jump");
 			}
+
 		}
 
 
