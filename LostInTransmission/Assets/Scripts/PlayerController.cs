@@ -31,11 +31,13 @@ public class PlayerController : MonoBehaviour {
 	}
 
 // if we collide with an object and its not the same as the last object we collided with, take damage and update the health bar. 
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnTriggerEnter(Collider other) {
 
-		health -= 5;
+		//print("Triggered!");
+		health -= 0.1f;
 	
 		healthBar.value =  health;
+
 		if (health <= 0) {
 		//	Debug.LogError ("Stop");
 		}
