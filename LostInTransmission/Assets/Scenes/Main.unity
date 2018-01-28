@@ -1653,7 +1653,6 @@ Prefab:
       propertyPath: m_Name
       value: CatPrefab
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 82433516077161450, guid: 49e32f6657f6e412ca816b047a6ddd59,
         type: 2}
       propertyPath: OutputAudioMixerGroup
@@ -1669,11 +1668,9 @@ Prefab:
         type: 2}
       propertyPath: m_Pitch
       value: 0.9
-=======
     - target: {fileID: 4178107242023024, guid: 49e32f6657f6e412ca816b047a6ddd59, type: 2}
       propertyPath: m_LocalScale.x
       value: 0.9875001
->>>>>>> 4e14190788c9ecc2b0bfb52b9c3829c738576658
       objectReference: {fileID: 0}
     - target: {fileID: 65068396181393616, guid: 49e32f6657f6e412ca816b047a6ddd59,
         type: 2}
