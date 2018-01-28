@@ -75,7 +75,14 @@ AudioMixerSnapshotController:
     8efed8f59df484b29ba5d0b86e6a85fa: -80
     041f857f9aeac4cf9922ac3d6a7d036f: 5.1526933
     576517bf536ac4291aa735bff80df37d: 0
-  m_TransitionOverrides: {}
+  m_TransitionOverrides:
+    bd384c6115c874b23aeabdaeb567106a: 2
+    026238651ca8140e7a87c5a847fb2f50: 2
+    8efed8f59df484b29ba5d0b86e6a85fa: 2
+    feb438580a1634d8695f71c9e3ea8c7c: 2
+    52e27b7b3075b4c5d9b419380490c352: 2
+    bdb4e93c424ec47fbb949e76832f65a9: 2
+    4422287f9ed44404385a2e21cf0243f8: 2
 --- !u!243 &243147499892000284
 AudioMixerGroupController:
   m_ObjectHideFlags: 0

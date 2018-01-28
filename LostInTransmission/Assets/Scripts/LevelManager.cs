@@ -16,6 +16,10 @@ public class LevelManager : MonoBehaviour {
 	}
 	public void MainMenuBtn(string StartMenu){
 		SceneManager.LoadScene ("StartMenu");
+		GameObject [] objects = GameObject.FindObjectsOfType <GameObject>();
+		foreach (GameObject o in objects) {
+			Destroy (o);
+		}
 	}
 }
 
