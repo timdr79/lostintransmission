@@ -194,6 +194,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bass: {fileID: 1922385485}
+--- !u!114 &36466690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36466685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8250f654dbe416fba7a11a836ee387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followIndex: 14
+  followSpeed: 2
 --- !u!1001 &61034127
 Prefab:
   m_ObjectHideFlags: 0
@@ -471,6 +484,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drums: {fileID: 1054885818}
+--- !u!114 &158646918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158646913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8250f654dbe416fba7a11a836ee387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followIndex: 12
+  followSpeed: 2
 --- !u!1 &235324045
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +588,16 @@ Prefab:
     - target: {fileID: 1755438507429202, guid: ea000bee6a5f94f2eb086e2eb964843d, type: 2}
       propertyPath: m_TagString
       value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071493545709594, guid: ea000bee6a5f94f2eb086e2eb964843d,
+        type: 2}
+      propertyPath: followIndex
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071493545709594, guid: ea000bee6a5f94f2eb086e2eb964843d,
+        type: 2}
+      propertyPath: followSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea000bee6a5f94f2eb086e2eb964843d, type: 2}
@@ -1657,6 +1693,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cello: {fileID: 1919879980}
+--- !u!114 &932231094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932231089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8250f654dbe416fba7a11a836ee387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followIndex: 6
+  followSpeed: 2
 --- !u!1 &973496050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1791,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mallets: {fileID: 99126360}
+--- !u!114 &985883317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985883312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8250f654dbe416fba7a11a836ee387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followIndex: 2
+  followSpeed: 2
 --- !u!1 &1054885817 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1040383950718660, guid: 3b64b978611cf4ffb961f9300cbf0146,
@@ -2522,6 +2584,16 @@ Prefab:
       propertyPath: m_TagString
       value: music
       objectReference: {fileID: 0}
+    - target: {fileID: 114731455156797698, guid: b7ff2938be3e849f7b8219b889de85cc,
+        type: 2}
+      propertyPath: followIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114731455156797698, guid: b7ff2938be3e849f7b8219b889de85cc,
+        type: 2}
+      propertyPath: followSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7ff2938be3e849f7b8219b889de85cc, type: 2}
   m_IsPrefabParent: 0
@@ -2822,6 +2894,16 @@ Prefab:
       propertyPath: m_TagString
       value: music
       objectReference: {fileID: 0}
+    - target: {fileID: 114582577373013472, guid: b80d39f8cb2d64a728896b2ef34c45a4,
+        type: 2}
+      propertyPath: followIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114582577373013472, guid: b80d39f8cb2d64a728896b2ef34c45a4,
+        type: 2}
+      propertyPath: followSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b80d39f8cb2d64a728896b2ef34c45a4, type: 2}
   m_IsPrefabParent: 0
@@ -2842,6 +2924,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Horn: {fileID: 705728260}
+--- !u!114 &1445095700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1445095695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8250f654dbe416fba7a11a836ee387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followIndex: 8
+  followSpeed: 2
 --- !u!1 &1450466160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,7 +3013,7 @@ Prefab:
     - target: {fileID: 135664839280291268, guid: 723400b80bb264602b591dede7506f62,
         type: 2}
       propertyPath: m_Radius
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1858167405555268, guid: 723400b80bb264602b591dede7506f62, type: 2}
       propertyPath: m_TagString

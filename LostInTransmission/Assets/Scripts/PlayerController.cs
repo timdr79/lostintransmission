@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour {
 
 	void GatherNote(Collider other)
 	{
-		other.gameObject.SetActive (false);
+		//other.gameObject.SetActive (false);
 		noteCount++;
 	}
 
