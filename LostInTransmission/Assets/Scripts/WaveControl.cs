@@ -58,11 +58,18 @@ public class WaveControl : MonoBehaviour {
 	public float repelForce;
 
 
+	private PlayerController sliderControl;
+
+
 
 	void Start(){
 		// in start we set the health to the max health. 
 		health = MaxHealth;
 		waveRigid.freezeRotation = true;
+		GameObject slider = GameObject.Find ("Slider");
+		sliderControl = slider.GetComponent<PlayerController> ();
+
+
 	}
 	void update(){
 		if(Input.GetKeyDown(KeyCode.Space)){
@@ -208,6 +215,54 @@ public class WaveControl : MonoBehaviour {
 //		if (health <= 0) {
 //			//destory wave
 //		}
+	}
+
+	void healthIncrease(){
+		sliderControl.health *= 1.1f;
+		if (sliderControl.health > 1f) {
+			sliderControl.health = 1f;
+		}
+		sliderControl.healthBar.value = sliderControl.health;
+	}
+
+	void healthDecrease(){
+		sliderControl.health *= 0.9f;
+		if (sliderControl.health < 0f) {
+			sliderControl.health = 0f;
+		}
+		sliderControl.healthBar.value = sliderControl.health;
+	}
+
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.layer == 8) {
+			Debug.Log ("Object entered the trigger");
+			healthIncrease ();
+			other.gameObject.SetActive (false);
+
+		}
+
+
+	}
+
+	void OnTriggerStay(Collider other) 
+	{
+		if (other.gameObject.layer == 8) {
+			Debug.Log ("Object stays in trigger");
+
+
+		}
+
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.layer == 8) {
+			Debug.Log ("Object leaves trigger");
+
+		}
+
 	}
 
 
