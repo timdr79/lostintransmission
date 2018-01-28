@@ -541,6 +541,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1755438507429202, guid: ea000bee6a5f94f2eb086e2eb964843d, type: 2}
+      propertyPath: m_TagString
+      value: music
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea000bee6a5f94f2eb086e2eb964843d, type: 2}
   m_IsPrefabParent: 0
@@ -1051,6 +1055,10 @@ Prefab:
         type: 2}
       propertyPath: m_FlipY
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199166516277824, guid: 6f003dc7b01d844eb96a5291f4327b46, type: 2}
+      propertyPath: m_TagString
+      value: music
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114325102460478736, guid: 6f003dc7b01d844eb96a5291f4327b46, type: 2}
@@ -1827,6 +1835,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1310718056858374, guid: f592c8e3a2ea14eb3868830d26502d5a, type: 2}
+      propertyPath: m_TagString
+      value: music
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114278792072149378, guid: f592c8e3a2ea14eb3868830d26502d5a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f592c8e3a2ea14eb3868830d26502d5a, type: 2}
@@ -2359,6 +2371,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1825531217098336, guid: b7ff2938be3e849f7b8219b889de85cc, type: 2}
+      propertyPath: m_TagString
+      value: music
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7ff2938be3e849f7b8219b889de85cc, type: 2}
   m_IsPrefabParent: 0
@@ -2655,6 +2671,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1420872074899934, guid: b80d39f8cb2d64a728896b2ef34c45a4, type: 2}
+      propertyPath: m_TagString
+      value: music
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b80d39f8cb2d64a728896b2ef34c45a4, type: 2}
   m_IsPrefabParent: 0
@@ -2752,6 +2772,10 @@ Prefab:
         type: 2}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1858167405555268, guid: 723400b80bb264602b591dede7506f62, type: 2}
+      propertyPath: m_TagString
+      value: music
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114106748543039602, guid: 723400b80bb264602b591dede7506f62, type: 2}
@@ -2961,6 +2985,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1473485642409932, guid: dd59cb44603f74704923b515ab7fd114, type: 2}
+      propertyPath: m_TagString
+      value: music
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114991557337335820, guid: dd59cb44603f74704923b515ab7fd114, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dd59cb44603f74704923b515ab7fd114, type: 2}
@@ -3107,6 +3135,10 @@ Prefab:
         type: 2}
       propertyPath: m_FlipY
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040383950718660, guid: 3b64b978611cf4ffb961f9300cbf0146, type: 2}
+      propertyPath: m_TagString
+      value: music
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114284575958322422, guid: 3b64b978611cf4ffb961f9300cbf0146, type: 2}
