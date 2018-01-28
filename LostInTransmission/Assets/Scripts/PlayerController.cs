@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 
 	private int noteCount;
 
+	public GameObject vfxPrefab;
+
 	void Start() {
 
 		//health = 1.0f;
@@ -29,13 +31,15 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 		// Health gradually decreases over time of game
-		health += Time.deltaTime * dropRate;
-		healthBar.value = health;
-		if (health <= 0.2) {
-			lowHealthText.enabled = true;
-		}
-		if (health <= 0) {
-			SceneManager.LoadScene("Defeat Scene");
+		if (healthBar != null) {
+			health += Time.deltaTime * dropRate;
+			healthBar.value = health;
+			if (health <= 0.2) {
+				lowHealthText.enabled = true;
+			}
+			if (health <= 0) {
+				SceneManager.LoadScene("Defeat Scene");
+			}
 		}
 	}
 
@@ -130,6 +134,18 @@ public class PlayerController : MonoBehaviour {
 		Win.TransitionTo (0.1f);
 		transform.SetParent(null);
 		DontDestroyOnLoad(gameObject);
-		SceneManager.LoadScene("Victory Scene");
+		vfxPrefab.SetActive(true);
+		StartCoroutine(WaitAndExplode(3.0f));
+		//SceneManager.LoadScene("Victory Scene");
 	}
+
+	private IEnumerator WaitAndExplode(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            print("WaitAndExplode " + Time.time);
+			SceneManager.LoadScene("Victory Scene");
+        }
+    }
 }
