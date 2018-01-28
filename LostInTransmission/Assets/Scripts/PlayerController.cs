@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour {
 
@@ -10,6 +11,9 @@ public class PlayerController : MonoBehaviour {
 	public float health;
 	public float dropRate;
 	public Text lowHealthText;
+
+	public AudioMixerSnapshot Default;
+	public AudioMixerSnapshot Win;
 
 	public int winCount = 5;
 
@@ -123,6 +127,9 @@ public class PlayerController : MonoBehaviour {
 
 	void WinGame()
 	{
+		Win.TransitionTo (0.1f);
+		transform.SetParent(null);
+		DontDestroyOnLoad(gameObject);
 		SceneManager.LoadScene("Victory Scene");
 	}
 }
