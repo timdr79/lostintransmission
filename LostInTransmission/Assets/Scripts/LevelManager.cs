@@ -14,8 +14,8 @@ public class LevelManager : MonoBehaviour {
 	public void VictoryScreen(string Victory){
 		SceneManager.LoadScene ("Victory");
 	}
-	public void MainMenuBtn(string Start){
-		SceneManager.LoadScene ("Start");
+	public void MainMenuBtn(string StartMenu){
+		SceneManager.LoadScene ("StartMenu");
 	}
 }
 
