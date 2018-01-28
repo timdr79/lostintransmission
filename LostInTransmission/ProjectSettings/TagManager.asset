@@ -8,6 +8,7 @@ TagManager:
   - cat
   - Fader
   - music
+  - win
   layers:
   - Default
   - TransparentFX

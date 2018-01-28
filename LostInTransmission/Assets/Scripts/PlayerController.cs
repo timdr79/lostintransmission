@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour {
 	public float dropRate;
 	public Text lowHealthText;
 
+	public int winCount = 5;
+
+	private int noteCount;
+
 	void Start() {
 
 		//health = 1.0f;
@@ -34,7 +38,7 @@ public class PlayerController : MonoBehaviour {
 // if we collide with an object and its not the same as the last object we collided with, take damage and update the health bar. 
 	void OnTriggerEnter(Collider other) {
 
-		//print("Triggered!");
+		print("Triggered!");
 
 
 		if (other.gameObject.tag == "cat") {
@@ -47,15 +51,44 @@ public class PlayerController : MonoBehaviour {
 				other.transform.GetChild (1).gameObject.SetActive (true);
 				other.transform.GetChild (0).gameObject.SetActive (false);
 			}
+			PlaySound (other);
+
 
 		} else if (other.gameObject.tag == "music") {
 			HitMusicNote (other);
+		} else if (other.gameObject.tag == "win") {
+			CheckWinGame ();
 		}
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.tag == "cat") {
+			//StopSound (other);
+			//TODO: Maybe stop the angry father sound?
+		}
+	}
+
+	void PlaySound(Collider other) {
+		
+		AudioSource audio = other.GetComponent<AudioSource> ();
+		if (audio == null) {
+			return;
+		}
+		audio.Play ();
+	}
+
+	void StopSound(Collider other) {
+		AudioSource audio = other.GetComponent<AudioSource> ();
+		if (audio == null) {
+			return;
+		}
+		audio.Stop();
 	}
 
 	void HitMusicNote(Collider other) {
 		HealthIncrease ();
-		other.gameObject.SetActive (false);
+		GatherNote (other);
 	}
 
 	void HealthIncrease(){
@@ -66,11 +99,30 @@ public class PlayerController : MonoBehaviour {
 		healthBar.value = health;
 	}
 
+	void GatherNote(Collider other)
+	{
+		other.gameObject.SetActive (false);
+		noteCount++;
+	}
+
 	void HealthDecrease(){
 		health *= 0.9f;
 		if (health < 0f) {
 			health = 0f;
 		}
 		healthBar.value = health;
+	}
+
+	void CheckWinGame()
+	{
+		if (noteCount >= winCount) {
+			WinGame ();
+		}
+		//TODO: Maybe tell the user they havent won yet
+	}
+
+	void WinGame()
+	{
+		SceneManager.LoadScene("Victory Scene");
 	}
 }
