@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void HealthIncrease(){
-		health *= 1.1f;
+		health += .1f;
 		if (health > 1f) {
 			health = 1f;
 		}
