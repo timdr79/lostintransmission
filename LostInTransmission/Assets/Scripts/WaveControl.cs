@@ -11,6 +11,9 @@ public class WaveControl : MonoBehaviour {
 	private bool boost;
 	public float doublespeed;
 
+	public AudioClip impact;
+	AudioSource audioSource;
+
 	// here we store a refrence to the rigidbody. x
 	public Rigidbody waveRigid;
 
@@ -66,6 +69,8 @@ public class WaveControl : MonoBehaviour {
 		waveRigid.freezeRotation = true;
 		GameObject slider = GameObject.Find ("Slider");
 		sliderControl = slider.GetComponent<PlayerController> ();
+
+		audioSource = GetComponent<AudioSource>();
 
 
 	}
@@ -223,6 +228,8 @@ public class WaveControl : MonoBehaviour {
 	{
 		if (other.gameObject.layer == 8) {
 //			Debug.Log ("Object entered the trigger");
+			audioSource.PlayOneShot(impact, 0.3F);
+			Debug.Log ("Are you triggering?");
 
 		}
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour {
 
@@ -11,9 +12,14 @@ public class PlayerController : MonoBehaviour {
 	public float dropRate;
 	public Text lowHealthText;
 
+	public AudioMixerSnapshot Default;
+	public AudioMixerSnapshot Win;
+
 	public int winCount = 5;
 
 	private int noteCount;
+
+	public GameObject vfxPrefab;
 
 	void Start() {
 
@@ -25,13 +31,15 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 		// Health gradually decreases over time of game
-		health += Time.deltaTime * dropRate;
-		healthBar.value = health;
-		if (health <= 0.2) {
-			lowHealthText.enabled = true;
-		}
-		if (health <= 0) {
-			SceneManager.LoadScene("Defeat Scene");
+		if (healthBar != null) {
+			health += Time.deltaTime * dropRate;
+			healthBar.value = health;
+			if (health <= 0.2) {
+				lowHealthText.enabled = true;
+			}
+			if (health <= 0) {
+				SceneManager.LoadScene("Defeat Scene");
+			}
 		}
 	}
 
@@ -92,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void HealthIncrease(){
-		health *= 1.1f;
+		health += .1f;
 		if (health > 1f) {
 			health = 1f;
 		}
@@ -123,6 +131,21 @@ public class PlayerController : MonoBehaviour {
 
 	void WinGame()
 	{
-		SceneManager.LoadScene("Victory Scene");
+		Win.TransitionTo (0.1f);
+		transform.SetParent(null);
+		DontDestroyOnLoad(gameObject);
+		vfxPrefab.SetActive(true);
+		StartCoroutine(WaitAndExplode(3.0f));
+		//SceneManager.LoadScene("Victory Scene");
 	}
+
+	private IEnumerator WaitAndExplode(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            print("WaitAndExplode " + Time.time);
+			SceneManager.LoadScene("Victory Scene");
+        }
+    }
 }
