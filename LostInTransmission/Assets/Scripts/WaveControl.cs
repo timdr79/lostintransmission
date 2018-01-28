@@ -49,10 +49,8 @@ public class WaveControl : MonoBehaviour {
 	Collider2D lastHit;
 
 	// the audio source is what plays our audio 
-	public AudioSource audioPlayer;
 
 	// the audio clip is which audio we play
-	public AudioClip explosionSound, repulseSound;
 
 	//repel force strength
 	public float repelForce;

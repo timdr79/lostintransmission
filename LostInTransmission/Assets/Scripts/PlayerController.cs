@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour {
 	
 		healthBar.value =  health;
 
-		other.gameObject.GetComponent<AudioSource>().Play();
-
 		if (other.gameObject.tag == "cat") {
 
 			other.transform.GetChild(1).gameObject.SetActive(true);
