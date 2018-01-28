@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadeIn : MonoBehaviour {
 
 	public bool fadeIn = false;
-	float FadeTime =  2;
+	float FadeTime =  1;
 
 	void Update()
 	{

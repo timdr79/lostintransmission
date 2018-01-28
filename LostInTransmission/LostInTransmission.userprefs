@@ -1,9 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WaveControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FadeIn.cs">
     <Files>
-      <File FileName="Assets/Scripts/MusicControlMallets.cs" Line="7" Column="1" />
-      <File FileName="Assets/Scripts/WaveControl.cs" Line="219" Column="56" />
+      <File FileName="Assets/Scripts/FadeIn.cs" Line="8" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
