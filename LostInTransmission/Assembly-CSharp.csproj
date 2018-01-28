@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\BassController.cs" />
      <Compile Include="Assets\Scripts\CamFollowScript.cs" />
      <Compile Include="Assets\Scripts\CelloControl.cs" />
+     <Compile Include="Assets\Scripts\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\DrumsController.cs" />
      <Compile Include="Assets\Scripts\FadeIn.cs" />
      <Compile Include="Assets\Scripts\HornControl.cs" />
