@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
 
 	public int winCount = 5;
 
-	private int noteCount;
+	private Dictionary<string, GameObject> noteMap;
 
 	public GameObject vfxPrefab;
 
@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 
 		//health = 1.0f;
 		//dropRate = -0.02f;
+		noteMap = new Dictionary<string, GameObject>();
 
 	}
 
@@ -110,7 +111,9 @@ public class PlayerController : MonoBehaviour {
 	void GatherNote(Collider other)
 	{
 		//other.gameObject.SetActive (false);
-		noteCount++;
+		if (!noteMap.ContainsKey(other.gameObject.name)) {
+			noteMap.Add(other.gameObject.name, other.gameObject);
+		}
 	}
 
 	void HealthDecrease(){
@@ -123,7 +126,7 @@ public class PlayerController : MonoBehaviour {
 
 	void CheckWinGame()
 	{
-		if (noteCount >= winCount) {
+		if (noteMap.Count >= winCount) {
 			WinGame ();
 		}
 		//TODO: Maybe tell the user they havent won yet
