@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour {
 
 	public void StartGameBtn(string Main){
-		SceneManager.LoadScene ("Main");
+		SceneManager.LoadScene ("Loading");
 	}
 	public void GameoverScreen(string GameOver){
 		SceneManager.LoadScene ("GameOver");

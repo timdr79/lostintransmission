@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class DrumsController : MonoBehaviour {
 
-	public Transform Drums;
+	public GameObject drums;
+
+	void Awake()
+	{
+		drums = GameObject.Find ("Drums");
+		if (drums != null) {
+			drums.GetComponent<AudioSource> ().Play ();
+		}
+	}
 
 	void Start()
 	{
-		Drums.GetComponent<AudioSource>().volume = 0;
+		if (drums != null) {
+			drums.GetComponent<AudioSource> ().volume = 0;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Drums.GetComponent<FadeIn>().fadeIn = true;
+		if (drums != null) {
+			drums.GetComponent<FadeIn> ().fadeIn = true;
+		}
 	}
 
 }

@@ -5,16 +5,29 @@ using UnityEngine.Audio;
 
 public class CelloControl : MonoBehaviour {
 
-	public Transform Cello;
+	public GameObject cello;
+
+	void Awake()
+	{
+		cello = GameObject.Find ("Cello");
+
+		if (cello != null) {
+			cello.GetComponent<AudioSource> ().Play ();
+		}
+	}
 
 	void Start()
-	{
-		Cello.GetComponent<AudioSource>().volume = 0;
+	{		
+		if (cello != null) {
+			cello.GetComponent<AudioSource> ().volume = 0;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Cello.GetComponent<FadeIn>().fadeIn = true;
+		if (cello != null) {
+			cello.GetComponent<FadeIn> ().fadeIn = true;
+		}
 	}
 
 }

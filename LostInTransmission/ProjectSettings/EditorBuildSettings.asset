@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Defeat Scene.unity
     guid: 68e35ea5dc09a674e9ad3bddd351bd0a
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 370e364bffb244968a4c71b6dd64d9f1

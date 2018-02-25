@@ -5,16 +5,28 @@ using UnityEngine.Audio;
 
 public class MalletControl : MonoBehaviour {
 
-	public Transform Mallets;
+	public GameObject mallets;
+
+	void Awake()
+	{
+		mallets = GameObject.Find ("Mallets");
+		if (mallets != null) {
+			mallets.GetComponent<AudioSource> ().Play ();
+		}
+	}
 
 	void Start()
 	{
-		Mallets.GetComponent<AudioSource>().volume = 0;
+		if (mallets != null) {
+			mallets.GetComponent<AudioSource> ().volume = 0;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Mallets.GetComponent<FadeIn>().fadeIn = true;
+		if (mallets != null) {
+			mallets.GetComponent<FadeIn> ().fadeIn = true;
+		}
 	}
 
 }

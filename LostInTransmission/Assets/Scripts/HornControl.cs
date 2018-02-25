@@ -5,16 +5,28 @@ using UnityEngine.Audio;
 
 public class HornControl : MonoBehaviour {
 
-	public Transform Horn;
+	public GameObject horn;
+
+	void Awake()
+	{
+		horn = GameObject.Find ("Horn");
+		if (horn != null) {
+			horn.GetComponent<AudioSource> ().Play ();
+		}
+	}
 
 	void Start()
 	{
-		Horn.GetComponent<AudioSource>().volume = 0;
+		if (horn != null) {
+			horn.GetComponent<AudioSource> ().volume = 0;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Horn.GetComponent<FadeIn>().fadeIn = true;
+		if (horn != null) {
+			horn.GetComponent<FadeIn> ().fadeIn = true;
+		}
 	}
 
 }

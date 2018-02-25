@@ -63,6 +63,7 @@
      <Compile Include="Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
      <Compile Include="Assets\FullTiltBoogie\RotateFlareHolder.cs" />
+     <Compile Include="Assets\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\BassController.cs" />
      <Compile Include="Assets\Scripts\CamFollowScript.cs" />
      <Compile Include="Assets\Scripts\CelloControl.cs" />
@@ -73,9 +74,11 @@
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MalletControl.cs" />
      <Compile Include="Assets\Scripts\MusicControl.cs" />
+     <Compile Include="Assets\Scripts\MusicStart.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\SetDefaultMusic.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
+     <Compile Include="Assets\Scripts\TextFade.cs" />
      <Compile Include="Assets\Scripts\WaveControl.cs" />
      <None Include="Assets\FullTiltBoogie\Helpers\readme.txt" />
      <None Include="Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

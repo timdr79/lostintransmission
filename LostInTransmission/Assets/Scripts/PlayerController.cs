@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour {
 	public AudioMixerSnapshot Default;
 	public AudioMixerSnapshot Win;
 
+	public AudioClip impact;
+	AudioSource audioSource;
+
 	public int winCount = 5;
 
 	private Dictionary<string, GameObject> noteMap;
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 		//health = 1.0f;
 		//dropRate = -0.02f;
 		noteMap = new Dictionary<string, GameObject>();
-
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -97,7 +100,8 @@ public class PlayerController : MonoBehaviour {
 
 	void HitMusicNote(Collider other) {
 		HealthIncrease ();
-		GatherNote (other);
+		bool gathered = GatherNote (other);
+		PlayChime (gathered);
 	}
 
 	void HealthIncrease(){
@@ -108,11 +112,20 @@ public class PlayerController : MonoBehaviour {
 		healthBar.value = health;
 	}
 
-	void GatherNote(Collider other)
+	bool GatherNote(Collider other)
 	{
 		//other.gameObject.SetActive (false);
 		if (!noteMap.ContainsKey(other.gameObject.name)) {
 			noteMap.Add(other.gameObject.name, other.gameObject);
+			return true;
+		}
+		return false;
+	}
+
+	void PlayChime(bool gathered)
+	{
+		if (gathered) {
+			audioSource.PlayOneShot (impact, 0.3F);
 		}
 	}
 

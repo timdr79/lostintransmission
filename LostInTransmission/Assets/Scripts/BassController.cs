@@ -5,16 +5,28 @@ using UnityEngine.Audio;
 
 public class BassController : MonoBehaviour {
 
-	public Transform Bass;
+	private GameObject bass;
+
+	void Awake()
+	{
+		bass = GameObject.Find("Bass");
+		if (bass != null) {
+			bass.GetComponent<AudioSource> ().Play ();
+		}
+	}
 
 	void Start()
 	{
-		Bass.GetComponent<AudioSource>().volume = 0;
+		if (bass != null) {
+			bass.GetComponent<AudioSource> ().volume = 0;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Bass.GetComponent<FadeIn>().fadeIn = true;
+		if (bass != null) {
+			bass.GetComponent<FadeIn> ().fadeIn = true;
+		}
 	}
 
 }
